@@ -37,6 +37,6 @@ jobs:
      - name: run the correct code
        run: npm run build
      - name: Print out put
-       run: "it is good code. can be deployed"       
+       run: write-host "it is good code. can be deployed"       
 
 
