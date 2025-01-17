@@ -2,7 +2,9 @@ name: DeploymentProject_aldi
 on: 
      push:
        branches:
-         - 'dev*'            
+         - 'dev*' 
+       paths: |
+              '.\src\test123\*'        
      pull_request:
         types:
           - opened
@@ -12,6 +14,8 @@ on:
           - master
           - main 
      workflow_dispatch:
+        
+             
 jobs:
   Testing:
     runs-on: windows-latest
