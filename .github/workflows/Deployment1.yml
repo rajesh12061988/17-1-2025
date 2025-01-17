@@ -27,7 +27,7 @@ jobs:
      - name: install json node
        uses: actions/setup-node@v4
      - name: Run the testing scrit
-       run: vitest run
+       run: npm run test
      - name: run the correct code
        run: npm rum build
      - name: Print out put
