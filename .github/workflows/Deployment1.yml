@@ -2,7 +2,7 @@ name: DeploymentProject_aldi
 on: 
      push:
        branches:
-         - 'mast*'            
+         - 'dev*'            
      pull_request:
         types:
           - opened
@@ -27,7 +27,7 @@ jobs:
      - name: install json node
        uses: actions/setup-node@v4
      - name: Run the testing scrit
-       run: npm run dev
+       run: npm run test
      - name: run the correct code
        run: npm rum build
      - name: Print out put
