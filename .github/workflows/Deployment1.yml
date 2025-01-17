@@ -31,7 +31,7 @@ jobs:
      - name: Run the testing scrit
        run: npm run test
      - name: run the correct code
-       run: npm rum build
+       run: npm run build
      - name: Print out put
        run: "it is good code. can be deployed"       
 
