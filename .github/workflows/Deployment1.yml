@@ -1,7 +1,16 @@
 name: DeploymentProject_aldi
 on: 
      push:
+       branches:
+         - 'dev*'            
      pull_request:
+        types:
+          - opened
+          - closed
+          - edited
+        branches:
+          - master
+          - main 
      workflow_dispatch:
 jobs:
   Testing:
@@ -9,5 +18,19 @@ jobs:
     steps:
       - name: print file
         run: write-host "reading"
+  Deployment:
+    needs: Testing
+    runs-on: windows-latest
+    steps:
+     - name: Download the necessary software
+       uses: actions/checkout@v4
+     - name: install json node
+       uses: actions/setup-node@v4
+     - name: Run the testing scrit
+       run: npm run dev
+     - name: run the correct code
+       run: npm rum build
+     - name: Print out put
+       run: "it is good code. can be deployed"       
 
 
