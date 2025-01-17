@@ -1,0 +1,12 @@
+name: DeploymentProject_aldi
+on: 
+    - push
+    - pull_request
+jobs:
+  Testing:
+    runs-on: windows-latest
+    steps:
+    - name: print file
+       run: write-host "reading"
+
+
