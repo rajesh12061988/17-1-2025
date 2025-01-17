@@ -1,12 +1,13 @@
 name: DeploymentProject_aldi
 on: 
-    - push
-    - pull_request
+     push:
+     pull_request:
+     workflow_dispatch:
 jobs:
   Testing:
     runs-on: windows-latest
     steps:
-    - name: print file
-       run: write-host "reading"
+      - name: print file
+        run: write-host "reading"
 
 
