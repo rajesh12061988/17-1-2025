@@ -2,7 +2,7 @@ name: DeploymentProject_aldi
 on: 
      push:
        branches:
-         - 'dev*'            
+         - 'mast*'            
      pull_request:
         types:
           - opened
