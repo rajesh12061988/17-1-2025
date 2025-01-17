@@ -28,6 +28,10 @@ jobs:
        uses: actions/setup-node@v4
        with: 
          version: 18
+     - name: install software 
+       run: npm install
+     - name : install software
+       run: npm install vite --save-dev
      - name: Run the testing scrit
        run: npm run test
      - name: run the correct code
