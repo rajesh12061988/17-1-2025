@@ -1,4 +1,4 @@
-name: DeploymentProject_aldi
+name: Deployment1
 on: 
      push:
        branches:
