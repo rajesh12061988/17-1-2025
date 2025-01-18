@@ -4,7 +4,7 @@ on:
      branches: 
         - dev
      paths:
-        'srv\test123\**'
+        'srv/test123/**'
     pull_request:
     workflow_dispatch:
 jobs:
