@@ -1,6 +1,10 @@
 name: Deployment2
 on:
     push: 
+     branches: 
+        - dev
+     paths:
+        'srv\test123\**'
     pull_request:
     workflow_dispatch:
 jobs:
