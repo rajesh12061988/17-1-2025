@@ -3,9 +3,14 @@ on:
     push: 
      branches: 
         - dev
-     paths:
-        'src/raj/**'
+        - master
     pull_request:
+        types:
+            - opened
+            - closed
+        branches:
+            - main
+            - master
     workflow_dispatch:
 jobs:
     testing:
@@ -23,6 +28,7 @@ jobs:
             run : npm run test
 
     Deploy:
+        needs: testing
         runs-on: ubuntu-latest
         steps:
            - name: intall neccessary software
