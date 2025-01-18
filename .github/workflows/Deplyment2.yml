@@ -1,8 +1,21 @@
 name: Deployment2
 on:
     push: 
+     branches: 
+        - dev
+        - master
     pull_request:
+        types:
+            - opened
+            - closed
+        branches:
+            - main
+            - master
     workflow_dispatch:
+    issues:
+        types:
+            - opened
+            - closed
 jobs:
     testing:
         runs-on: ubuntu-latest
@@ -19,6 +32,7 @@ jobs:
             run : npm run test
 
     Deploy:
+        needs: testing
         runs-on: ubuntu-latest
         steps:
            - name: intall neccessary software
