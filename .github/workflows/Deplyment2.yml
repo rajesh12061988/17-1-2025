@@ -1,0 +1,29 @@
+name: Deployment2
+on:
+    push: 
+    pull_request:
+    workflow_dispatch:
+jobs:
+    testing:
+        runs-on: ubuntu-latest
+        steps:
+          - name: writing new code
+            run: echo "Rajesh is ready for devops"
+          - name: install necessay software
+            uses: actions/checkout@v4
+          - name: install nodejs
+            uses: actions/setup-node@v4
+          - name: test code
+            run : npm run test
+
+    Deploy:
+        runs-on: ubuntu-latest
+        steps:
+           - name: intall neccessary software
+             uses: actions/checkout@v4
+           - name: install node-js
+             uses: actions/setuo-node@v4
+             with: 
+                version: 18
+           - name: run deploy
+             run: npm run build
