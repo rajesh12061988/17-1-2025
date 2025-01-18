@@ -24,7 +24,7 @@ jobs:
            - name: intall neccessary software
              uses: actions/checkout@v4
            - name: install node-js
-             uses: actions/setuo-node@v4
+             uses: actions/setup-node@v4
              with: 
                 version: 18
            - name: install software
